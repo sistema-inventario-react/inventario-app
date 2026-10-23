@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Producto } from '../producto';
+import { ProductoService } from '../producto-service';
 
 @Component({
   imports: [],
@@ -6,4 +8,10 @@ import { Component } from '@angular/core';
   templateUrl: './producto-lista.html',
 })
 
-export class ProductoLista {}
+export class ProductoLista {
+  productos!: Producto[];
+
+  private productoService = inject(ProductoService);
+
+  ng
+}
